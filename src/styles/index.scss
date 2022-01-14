@@ -1,0 +1,86 @@
+@import './variables.scss';
+@import './button.scss';
+@import './table.scss';
+@import './form.scss';
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $background;
+}
+
+div:focus {
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  height: 100%;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+.text-center {
+  text-align: center
+}
+
+.none-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+/** THEME */
+.button,
+.button__primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.button__secondary {
+  background-color: #44476D;
+  border-color: $secondary-color;
+}
+.table-head {
+  th {
+    background-color: $secondary-color;
+  }
+}
+
+.button__error {
+  background-color: $error-color;
+  border-color: $error-color;
+}
+
+.table,
+.card {
+  @include box-shadow;
+}
